@@ -1,3 +1,27 @@
+
+import subprocess
+import sys
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+# List of packages to install
+packages = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "seaborn",
+    "scikit-learn",
+    "yfinance",
+    "streamlit",
+    "tensorflow",
+    "keras"
+]
+
+# Install each package
+for package in packages:
+    install(package)
+
 import yfinance as yf
 import pandas as pd
 import numpy as np
